@@ -1,0 +1,312 @@
+/*
+	terrafirma1.0 by nodethirtythree design
+	http://www.nodethirtythree.com
+*/
+
+/*300*/
+/*768*/
+/*992*/
+/*1200*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F9F9F7 url('images/a1.gif') repeat-x;
+    font-size: 0.68em;
+    font-family: "trebuchet ms", helvetica, sans-serif;
+    color: #8C8C73;
+    line-height: 1.5em;
+}
+
+a {
+    color: #FF7800;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+sup {
+    font-size: 0.5em;
+}
+
+
+p {
+    margin-bottom: 14px;
+    text-align: justify;
+}
+
+img.picA {
+    position: relative;
+    top: -2px;
+    background: url('images/a47.gif') no-repeat;
+    width: 76px;
+    height: 74px;
+    padding: 8px;
+}
+
+img.picB {
+    position: relative;
+    top: -2px;
+    background: url('images/a26.gif') no-repeat;
+    width: 146px;
+    height: 75px;
+    padding: 7px;
+}
+
+img.floatleft {
+    float: left;
+    margin: 0 14px 3px 0;
+}
+
+
+ul.linklist {
+    list-style: none;
+}
+
+ul.linklist li {
+    border-top: solid 1px #EEEEEE;
+    padding-top: 5px;
+    margin: 5px 0 0 0;
+}
+
+ul.linklist li:first-child {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/*TAISYTINA*/
+
+/*#upbg {*/
+/*    position: absolute;*/
+/*    background: #fff url('images/upbg.gif') no-repeat;*/
+/*    width: 75%;*/
+/*    height: 264px;*/
+/*    z-index: 1;*/
+/*}*/
+
+.container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.wrapper {
+    width: 75%;
+    background: #fff url('images/abg.gif') repeat-y;
+    z-index: 2;
+}
+
+header {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.logo {
+    background: #FF7800 url('images/a8.gif') repeat-x;
+    width: 20%;
+    height: 92px;
+    color: #fff;
+    padding-left: 20px;
+}
+
+.logo span {
+    font-weight: normal;
+}
+
+.logo h1 {
+    position: absolute;
+    font-size: 23px;
+    letter-spacing: -1px;
+    top: 30px;
+    height: 92px;
+}
+
+.logo h2 {
+    position: absolute;
+    font-size: 10px;
+    font-weight: normal;
+    color: #FCE2CA;
+    top: 51px;
+}
+
+.logo sup {
+    color: #FCE2CA;
+}
+
+#splash {
+    background: #EAEAE2 url('images/a10.jpg') no-repeat;
+    width: 80%;
+    height: 92px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: #46461F url('images/a16.gif') repeat-x;
+    height: 67px;
+    padding-left: 5px;
+    margin: 5px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav ul li {
+    line-height: 52px;
+    padding-left: 3px;
+}
+
+nav ul li:first-child {
+    border-left: 0;
+}
+
+nav ul li a {
+    background-color: transparent;
+    background-repeat: repeat-x;
+    padding: 8px 12px 8px 12px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background: #fff url('images/a18.gif') repeat-x top;
+    color: #4A4A24;
+    text-decoration: none;
+}
+
+#date {
+    line-height: 52px;
+    color: #BDBDA2;
+    right: 30px;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: -1px;
+    padding-right: 20px;
+}
+
+aside {
+    position: relative;
+    width: 180px;
+    float: right;
+}
+
+aside h3 {
+    position: relative;
+    top: 4px;
+    font-size: 16px;
+    line-height: 25px;
+    color: #656551;
+    letter-spacing: -1px;
+    background: url('images/a22.gif') bottom repeat-x;
+    padding: 0px 0px 10px 10px;
+    margin-bottom: 20px;
+}
+
+aside .content {
+    padding: 0px 10px 0px 10px;
+    margin-bottom: 20px;
+}
+
+main {
+    position: relative;
+    width: 480px;
+    float: left;
+}
+
+main h3 {
+    position: relative;
+    top: 4px;
+    font-size: 18px;
+    line-height: 25px;
+    color: #656551;
+    letter-spacing: -1px;
+    background: url('images/a22.gif') bottom repeat-x;
+    padding: 0px 0px 10px 15px;
+    margin-bottom: 20px;
+}
+
+main .content {
+    padding: 0px 15px 0px 15px;
+    margin-bottom: 20px;
+}
+
+article {
+    margin-bottom: 30px;
+}
+
+article .header {
+    position: relative;
+}
+
+article .date {
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    line-height: 35px;
+    color: #AFAFA4;
+    font-weight: bold;
+}
+
+article .content {
+    margin-bottom: 0px;
+}
+
+article .footer {
+    position: relative;
+    top: -10px;
+    background: url('images/a33.gif') repeat-x;
+    height: 64px;
+}
+
+article .footer ul {
+    list-style: none;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+
+article .footer ul li {
+    display: inline;
+    line-height: 14px;
+    padding-left: 17px;
+    margin-left: 25px;
+    background-repeat: no-repeat;
+    background-position: 0px 2px;
+}
+
+article .footer ul li.printerfriendly {
+    background-image: url('images/a41.gif');
+}
+
+article .footer ul li.comments {
+    background-image: url('images/a36.gif');
+}
+
+article .footer ul li.readmore {
+    background-image: url('images/a38.gif');
+}
+
+footer {
+    position: relative;
+    clear: both;
+    height: 66px;
+    text-align: center;
+    line-height: 66px;
+    background-image: url('images/a50.gif');
+    color: #A8A88D;
+}
+
+footer a {
+    color: #8C8C73;
+}
