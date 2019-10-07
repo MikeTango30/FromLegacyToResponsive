@@ -2,12 +2,6 @@
 	terrafirma1.0 by nodethirtythree design
 	http://www.nodethirtythree.com
 */
-
-/*300*/
-/*768*/
-/*992*/
-/*1200*/
-
 * {
     padding: 0;
     margin: 0;
@@ -16,7 +10,7 @@
 
 body {
     background: #F9F9F7 url('images/a1.gif') repeat-x;
-    font-size: 0.68em;
+    font-size: 0.8rem;
     font-family: "trebuchet ms", helvetica, sans-serif;
     color: #8C8C73;
     line-height: 1.5em;
@@ -45,18 +39,30 @@ img.picA {
     position: relative;
     top: -2px;
     background: url('images/a47.gif') no-repeat;
+    background-size: contain;
     width: 76px;
     height: 74px;
     padding: 8px;
 }
 
 img.picB {
-    position: relative;
-    top: -2px;
     background: url('images/a26.gif') no-repeat;
-    width: 146px;
-    height: 75px;
+    background-size: contain;
     padding: 7px;
+}
+
+@media screen and (min-width: 992px) and (max-width:1200px){
+    img.picB {
+        width: 138px;
+        height: 74px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:991px){
+    img.picB {
+        width: 118px;
+        height: 64px;
+    }
 }
 
 img.floatleft {
@@ -81,36 +87,49 @@ ul.linklist li:first-child {
     padding-top: 0;
 }
 
-/*TAISYTINA*/
-
-/*#upbg {*/
-/*    position: absolute;*/
-/*    background: #fff url('images/upbg.gif') no-repeat;*/
-/*    width: 75%;*/
-/*    height: 264px;*/
-/*    z-index: 1;*/
-/*}*/
-
 .container {
     display: flex;
     justify-content: center;
-
 }
 
 .wrapper {
-    width: 75%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    width: 70%;
     background: #fff url('images/abg.gif') repeat-y;
+    background-size: cover;
+    border-right: 1px solid #e0dede;
+    border-left: 1px solid #e0dede;
+    -webkit-box-shadow: 0 0 22px 10px rgba(233,233,245,1);    padding: 0 5px;
     z-index: 2;
+}
+
+@media screen and (max-width:767px){
+    .wrapper {
+        flex-flow: column nowrap;
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:991px){
+    .wrapper {
+        width: 85%;
+    }
 }
 
 header {
     display: flex;
     flex-flow: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5px;
 }
 
 .logo {
     background: #FF7800 url('images/a8.gif') repeat-x;
-    width: 20%;
+    width: 22.2%;
+    min-width: 152px;
     height: 92px;
     color: #fff;
     padding-left: 20px;
@@ -142,16 +161,34 @@ header {
 
 #splash {
     background: #EAEAE2 url('images/a10.jpg') no-repeat;
-    width: 80%;
+    background-size: cover;
+    width: 77.2%;
     height: 92px;
+}
+
+@media screen and (min-width: 768px) and (max-width:991px){
+    #splash {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width:767px){
+    #splash {
+        display: none;
+    }
+
+    .logo {
+        width: 100%;
+    }
 }
 
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     background: #46461F url('images/a16.gif') repeat-x;
-    height: 67px;
+    height: 4.25em;
     padding-left: 5px;
     margin: 5px 0;
 }
@@ -162,7 +199,8 @@ nav ul {
 }
 
 nav ul li {
-    line-height: 52px;
+    list-style: none;
+    line-height: 3.25em;
     padding-left: 3px;
 }
 
@@ -173,11 +211,19 @@ nav ul li:first-child {
 nav ul li a {
     background-color: transparent;
     background-repeat: repeat-x;
-    padding: 8px 12px 8px 12px;
-    font-size: 12px;
+    padding: 8px 12px;
+    font-size: 0.9em;
     color: #fff;
     font-weight: bold;
 }
+
+@media screen and (max-width:767px){
+    nav ul li a {
+        padding: 8px 3px;
+        letter-spacing: -1px;
+    }
+}
+
 
 nav ul li a:hover {
     background: #fff url('images/a18.gif') repeat-x top;
@@ -186,103 +232,146 @@ nav ul li a:hover {
 }
 
 #date {
-    line-height: 52px;
     color: #BDBDA2;
-    right: 30px;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 0.75em;
     letter-spacing: -1px;
-    padding-right: 20px;
+    padding-right: 1.25em;
 }
 
 aside {
-    position: relative;
-    width: 180px;
-    float: right;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    max-width: 22.5%;
 }
 
 aside h3 {
-    position: relative;
-    top: 4px;
-    font-size: 16px;
-    line-height: 25px;
+    font-size: 1rem;
+    line-height: 1.5rem;
     color: #656551;
     letter-spacing: -1px;
     background: url('images/a22.gif') bottom repeat-x;
-    padding: 0px 0px 10px 10px;
-    margin-bottom: 20px;
+    padding: 0 0 10px 10px;
+    margin-bottom: 1.25em;
 }
 
 aside .content {
-    padding: 0px 10px 0px 10px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    padding: 0 10px;
     margin-bottom: 20px;
 }
 
+@media screen and (min-width: 300px) and (max-width: 767px) {
+    aside {
+        max-width: 100%;
+    }
+
+    aside h3 {
+        line-height: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    aside .content {
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+
+    aside li {
+        font-size: 0.8rem;
+        line-height: 1.1em;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    aside h3 {
+        line-height: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    aside .content {
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+
+    aside li {
+        font-size: 0.65rem;
+        line-height: 1.1em;
+    }
+}
+
 main {
-    position: relative;
-    width: 480px;
-    float: left;
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 77.5%;
 }
 
 main h3 {
-    position: relative;
-    top: 4px;
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
     color: #656551;
     letter-spacing: -1px;
-    background: url('images/a22.gif') bottom repeat-x;
-    padding: 0px 0px 10px 15px;
+
+    padding: 0 0 10px 15px;
     margin-bottom: 20px;
 }
 
 main .content {
-    padding: 0px 15px 0px 15px;
+    padding: 0 15px;
     margin-bottom: 20px;
 }
 
 article {
-    margin-bottom: 30px;
-}
-
-article .header {
-    position: relative;
-}
-
-article .date {
-    position: absolute;
-    right: 15px;
-    top: 0px;
-    line-height: 35px;
-    color: #AFAFA4;
-    font-weight: bold;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 article .content {
-    margin-bottom: 0px;
+    margin-bottom: 0;
+}
+
+article .header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    background: url('images/a22.gif') center repeat-x;
+    padding-right: 0.9rem;
+}
+
+article .date {
+    line-height: 2.3em;
+    color: #AFAFA4;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 article .footer {
-    position: relative;
-    top: -10px;
+    display: flex;
+    justify-content: flex-end;
     background: url('images/a33.gif') repeat-x;
-    height: 64px;
+    height: 4em;
+    margin: 10px;
 }
 
 article .footer ul {
     list-style: none;
-    position: absolute;
-    right: 15px;
-    bottom: 15px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 0.9rem;
 }
 
 article .footer ul li {
-    display: inline;
-    line-height: 14px;
-    padding-left: 17px;
-    margin-left: 25px;
+    font-size: 0.9em;
+    line-height: 0.9rem;
+    padding-left: 15px;
+    margin-left: 5px;
     background-repeat: no-repeat;
-    background-position: 0px 2px;
+    background-position: 0 2px;
 }
 
 article .footer ul li.printerfriendly {
@@ -297,14 +386,51 @@ article .footer ul li.readmore {
     background-image: url('images/a38.gif');
 }
 
+@media screen and (min-width: 300px) and (max-width: 767px) {
+    main h3 {
+        font-size: 1rem;
+        line-height: 1.2rem;
+        padding: 0 0 5px 10px;
+        margin-bottom: 5px;
+    }
+
+    main {
+        max-width: 100%;
+    }
+
+    main .content {
+        margin-bottom: 5px;
+    }
+
+    article {
+        margin-bottom: 5px;
+    }
+
+    article .header {
+        flex-flow: column;
+        background: url('images/a22.gif') bottom repeat-x;
+    }
+
+    article .date {
+        padding-left: 15px;
+        line-height: 1rem;
+    }
+
+    article .footer {
+        font-size: 0.9em;
+        height: 0;
+        margin-bottom: 1.5em;
+    }
+}
+
 footer {
-    position: relative;
-    clear: both;
+    width: 100%;
     height: 66px;
     text-align: center;
     line-height: 66px;
     background-image: url('images/a50.gif');
     color: #A8A88D;
+    margin: 1.25em;
 }
 
 footer a {
