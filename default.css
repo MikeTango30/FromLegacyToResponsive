@@ -187,7 +187,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background: #46461F url('images/a16.gif') repeat-x;
+    background: #46461F url('images/a16a.gif') repeat-x;
     height: 4.25em;
     padding-left: 5px;
     margin: 5px 0;
@@ -218,7 +218,21 @@ nav ul li a {
 }
 
 @media screen and (max-width:767px){
+    nav {
+        height: auto;
+        background-size: contain;
+        padding: 3px 0 8px 0;
+
+    }
+    nav ul {
+        flex-flow: column nowrap;
+    }
+    nav ul li {
+        line-height: 1.1rem;
+    }
+
     nav ul li a {
+        font-size: 1.1em;
         padding: 8px 3px;
         letter-spacing: -1px;
     }
